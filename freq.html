@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Website FAQs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: hwb(0 97% 3%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .faq {
+            margin-bottom: 20px;
+        }
+        .question {
+            font-weight: bold;
+            cursor: pointer;
+            color: #007bff;
+        }
+        .answer {
+            display: none;
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions About pets</h1>
+        
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer1')">Q: What type of pets do you offer?</div>
+            <div class="answer" id="answer1">A: We offer a variety of pets including dogs, cats, birds, fish, and small animals like hamsters and rabbits.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer2')">Q: Are your pets vaccinated and healthy?</div>
+            <div class="answer" id="answer2">A: Yes, all our pets receive proper vaccinations and health checks before they are made available for adoption.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer3')">Q: Do you offer pet grooming services?</div>
+            <div class="answer" id="answer3">A: Yes, we provide grooming services for dogs and cats including baths, haircuts, and nail trimming.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer4')">Q: Can I return a pet if it doesn't work out?</div>
+            <div class="answer" id="answer4">A: Yes, we have a return policy in place. Please check our terms and conditions for more details.</div>
+        </div>
+
+        <div class="faq">
+            <div class="question" onclick="toggleAnswer('answer5')">Q: How do I adopt a pet from your website?</div>
+            <div class="answer" id="answer5">A: To adopt a pet, simply browse our available pets, fill out an adoption application, and schedule a meeting with the pet.</div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
